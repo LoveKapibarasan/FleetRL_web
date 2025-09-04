@@ -1,0 +1,8 @@
+{
+  "title": "EV-Ladeplan",
+  "departure": "Abfahrtszeit",
+  "target": "Ziel-SoC (%)",
+  "submit": "Plan absenden",
+  "resend": "Erneut senden",
+  "success": "Ladeplan erfolgreich übermittelt!"
+}

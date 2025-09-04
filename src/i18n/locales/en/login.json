@@ -1,0 +1,12 @@
+{
+  "title": "Login",
+  "username": "Username",
+  "password": "Password",
+  "login": "Login",
+  "nfuc": "Login with NFUC (Touch)",
+  "register": "Register",
+  "success": "Welcome, {name}!",
+  "fail": "Please enter username and password",
+  "nfuc_success": "NFUC touch authentication success!",
+  "register_msg": "Go to register page (not implemented)"
+}

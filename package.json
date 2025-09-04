@@ -1,0 +1,38 @@
+{
+  "name": "fleetrl-web",
+  "version": "0.0.1",
+  "private": true,
+  "description": "FleetRL web frontend built with Vue 3 + Vite + TypeScript",
+  "author": "LoveKapibarasan test@example.com",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LoveKapibarasan/fleetrl-web.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LoveKapibarasan/fleetrl-web/issues"
+  },
+  "homepage": "https://github.com/LoveKapibarasan/fleetrl-web#readme",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "flag-icons": "^7.5.0",
+    "vue": "^3.5.18",
+    "vue-i18n": "^11.1.11"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.12",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "@vue/tsconfig": "^0.7.0",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.12",
+    "typescript": "~5.8.3",
+    "vite": "^7.1.2",
+    "vue-tsc": "^3.0.5"
+  }
+}

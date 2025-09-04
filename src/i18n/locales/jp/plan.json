@@ -1,0 +1,8 @@
+{
+  "title": "EV充電計画 ",
+  "departure": "出発時刻",
+  "target": "目標SoC (%)",
+  "submit": "送信",
+  "resend": "再送信",
+  "success": "充電計画を送信しました！"
+}

@@ -1,0 +1,12 @@
+{
+  "title": "ログイン",
+  "username": "ユーザー名",
+  "password": "パスワード",
+  "login": "ログイン",
+  "nfuc": "NFUCでログイン（タッチ認証）",
+  "register": "新規登録",
+  "success": "{name} さん、ようこそ！",
+  "fail": "ユーザー名とパスワードを入力してください",
+  "nfuc_success": "NFUCタッチ認証に成功しました！",
+  "register_msg": "登録ページへ移動（未実装）"
+}

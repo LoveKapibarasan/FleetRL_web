@@ -1,0 +1,8 @@
+{
+  "title": "EV Charging Plan ",
+  "departure": "Departure Time",
+  "target": "Target SoC (%)",
+  "submit": "Submit Plan",
+  "resend": "Resend",
+  "success": "Plan submitted successfully!"
+}

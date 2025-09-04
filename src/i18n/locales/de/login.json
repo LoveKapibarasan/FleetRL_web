@@ -1,0 +1,12 @@
+{
+  "title": "Anmelden",
+  "username": "Benutzername",
+  "password": "Passwort",
+  "login": "Anmelden",
+  "nfuc": "Mit NFUC anmelden (Touch)",
+  "register": "Registrieren",
+  "success": "Willkommen, {name}!",
+  "fail": "Bitte Benutzername und Passwort eingeben",
+  "nfuc_success": "NFUC-Touch-Authentifizierung erfolgreich!",
+  "register_msg": "Zur Registrierungsseite (noch nicht implementiert)"
+}
