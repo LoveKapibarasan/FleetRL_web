@@ -34,7 +34,7 @@ const handleLogout = () => {
     <div class="flex flex-1 flex-row-reverse">
       <RightSideBar v-if="isLoggedIn" />
       <main class="flex-1 p-6">
-        <router-view />
+          <router-view @login="handleLogin" />
       </main>
     </div>
     <Footer/>

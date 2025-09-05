@@ -8,8 +8,10 @@ const cells = Array.from({ length: gridSize * gridSize }, (_, i) => {
 </script>
 
 <template>
-  <div class="relative w-80 h-80">
-    <!-- Grid -->
+  <div
+    class="relative mx-auto aspect-square"
+    :style="{ width: 'clamp(120px, 15vw, 250px)' }"
+  >
     <div
       class="absolute inset-0 grid"
       :style="{
@@ -28,15 +30,26 @@ const cells = Array.from({ length: gridSize * gridSize }, (_, i) => {
       ></div>
     </div>
 
-    <!-- Text -->
-    <div class="absolute inset-0 flex flex-col items-center justify-center font-bold text-white drop-shadow-lg">
-      <span class="text-4xl">AI-Charge</span>
-      <span class="text-lg font-medium">Technologies</span>
+    <div
+      class="absolute inset-0 flex flex-col items-center justify-center font-bold text-white drop-shadow-lg text-center"
+    >
+      <span
+        class="font-bold"
+        :style="{ fontSize: 'clamp(1.5rem, 6vw, 3rem)' }"
+      >
+        AI-Charge
+      </span>
+      <span
+        class="font-medium"
+        :style="{ fontSize: 'clamp(0.75rem, 2vw, 1.25rem)' }"
+      >
+        Technologies
+      </span>
     </div>
   </div>
 </template>
 
-<style>
+<style scoped>
 @keyframes gradientWave {
   0%   { background: linear-gradient(135deg, #ff0000, #ff7f7f); }
   40%  { background: linear-gradient(135deg, #ff0000, #ff7f7f); } /* Red */

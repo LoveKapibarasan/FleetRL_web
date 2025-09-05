@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed } from "vue"
+import { ref, computed, onMounted } from "vue"
 import { useI18n } from "vue-i18n"
 
 const { locale } = useI18n()
@@ -18,8 +18,17 @@ const currentLocale = computed(() => {
 
 const setLocale = (code: string) => {
   locale.value = code
+  localStorage.setItem("appLocale", code)
   open.value = false
 }
+
+
+onMounted(() => {
+  const savedLocale = localStorage.getItem("appLocale")
+  if (savedLocale) {
+    locale.value = savedLocale
+  }
+})
 </script>
 
 <template>

@@ -1,0 +1,6 @@
+{
+  "soc": "{value}%",
+  "charging": "Charging",
+  "discharging": "Discharging",
+  "full": "Fully Charged"
+}

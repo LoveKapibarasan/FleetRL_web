@@ -19,6 +19,7 @@ const login = () => {
     emit("login", username.value) // pass session info
     message.value = t("login.success", { name: username.value })
     router.push("/plan")
+    isLoggedIn.value = true
   } else {
     message.value = t("login.fail")
   }
@@ -29,6 +30,7 @@ const nfucLogin = () => {
   emit("login", "NFUC-user") // TODO
   message.value = t("login.nfuc_success")
   router.push("/plan") 
+  isLoggedIn.value = true
 }
 
 const register = () => {

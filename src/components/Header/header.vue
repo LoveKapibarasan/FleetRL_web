@@ -13,10 +13,11 @@ const emit = defineEmits(["logout"])
         <Logo />
       </div>      
     </div>
-    <div class = "flex">
+  <div class="flex items-center gap-3">
     <!-- Title -->
-    <h1 class="text-xl font-bold text-gray-800">FleetRL Web</h1> 
-    </div>
+    <h1 class="text-2xl font-bold text-gray-800">FleetRL Web</h1>
+    <img src="@/assets/logo.png" alt="FleetRL Web" class="h-28 w-auto" />
+  </div>
     <!-- Right side: Logout + Language Switcher -->
     <div class="flex items-center gap-4">
       <button
