@@ -14,37 +14,39 @@ const submitPlan = () => {
 </script>
 
 <template>
-  <div class="w-full max-w-md bg-white rounded-2xl shadow-lg p-6">
-    <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">
-      {{ t("plan.title") }}
-    </h2>
+  <div class="min-h-screen flex items-center justify-center bg-gray-100">
+    <div class="w-full max-w-md bg-white rounded-2xl shadow-lg p-6">
+      <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">
+        {{ t("plan.title") }}
+      </h2>
 
-    <form @submit.prevent="submitPlan" class="space-y-5">
-      <div>
-        <label class="block text-sm font-medium text-gray-700 mb-1">
-          {{ t("plan.departure") }}
-        </label>
-        <input type="datetime-local" v-model="departureTime"
-          class="w-full rounded-lg border-gray-300 focus:border-blue-500 focus:ring-blue-500 p-2" />
-      </div>
+      <form @submit.prevent="submitPlan" class="space-y-5">
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">
+            {{ t("plan.departure") }}
+          </label>
+          <input type="datetime-local" v-model="departureTime"
+            class="w-full rounded-lg border-gray-300 focus:border-blue-500 focus:ring-blue-500 p-2" />
+        </div>
 
-      <div>
-        <label class="block text-sm font-medium text-gray-700 mb-1">
-          {{ t("plan.target") }}
-        </label>
-        <input type="number" v-model="targetSoc" min="0" max="100"
-          class="w-full rounded-lg border-gray-300 focus:border-blue-500 focus:ring-blue-500 p-2" />
-      </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">
+            {{ t("plan.target") }}
+          </label>
+          <input type="number" v-model="targetSoc" min="0" max="100"
+            class="w-full rounded-lg border-gray-300 focus:border-blue-500 focus:ring-blue-500 p-2" />
+        </div>
 
-      <button type="submit"
-        class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition">
-        {{ message ? t("plan.resend") : t("plan.submit") }}
-      </button>
-    </form>
+        <button type="submit"
+          class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition">
+          {{ message ? t("plan.resend") : t("plan.submit") }}
+        </button>
+      </form>
 
-    <p v-if="message" class="mt-4 text-center text-green-600 font-semibold">
-      {{ message }}
-    </p>
+      <p v-if="message" class="mt-4 text-center text-green-600 font-semibold">
+        {{ message }}
+      </p>
+    </div>
   </div>
 </template>
 

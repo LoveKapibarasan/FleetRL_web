@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue"
 import { useI18n } from "vue-i18n"
+import { useRouter } from "vue-router"
 
 const { t } = useI18n()
 
@@ -10,18 +11,24 @@ const message = ref("")
 
 const emit = defineEmits(["login"])
 
+const router = useRouter()
+
 const login = () => {
   if (username.value && password.value) {
+    localStorage.setItem("sessionUser", username.value)
     emit("login", username.value) // pass session info
     message.value = t("login.success", { name: username.value })
+    router.push("/plan")
   } else {
     message.value = t("login.fail")
   }
 }
 
 const nfucLogin = () => {
+  localStorage.setItem("sessionUser", "NFUC-user")
   emit("login", "NFUC-user") // TODO
   message.value = t("login.nfuc_success")
+  router.push("/plan") 
 }
 
 const register = () => {

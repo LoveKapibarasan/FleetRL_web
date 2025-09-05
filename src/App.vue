@@ -20,32 +20,24 @@ const handleLogin = (user: string) => {
   isLoggedIn.value = true
 }
 
-// For Logout
 const handleLogout = () => {
   localStorage.removeItem("sessionUser")
   isLoggedIn.value = false
+  location.href = "/login"
 }
 </script>
 
 <template>
   <div class="min-h-screen flex flex-col">
-    <!-- ヘッダー -->
     <Header @logout="handleLogout" />
 
-    <!-- メイン部分: コンテンツ + サイドバー -->
     <div class="flex flex-1 flex-row-reverse">
-      <!-- 右サイドバー（ログイン時のみ表示） -->
       <RightSideBar v-if="isLoggedIn" />
-
-      <!-- メインコンテンツ -->
-      <main class="flex-1 flex items-center justify-center p-6">
-        <PlanForm v-if="isLoggedIn" />
-        <LoginForm v-else @login="handleLogin" />
+      <main class="flex-1 p-6">
+        <router-view />
       </main>
     </div>
-
-    <!-- フッター -->
-    <Footer />
+    <Footer/>
   </div>
 </template>
 
