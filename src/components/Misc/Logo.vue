@@ -1,5 +1,4 @@
 <script setup lang="ts">
-//Δt = 5000 / (gridSize * 2 - 1)
 const gridSize = 10
 const cells = Array.from({ length: gridSize * gridSize }, (_, i) => {
   const row = Math.floor(i / gridSize) + 1
@@ -21,9 +20,10 @@ const cells = Array.from({ length: gridSize * gridSize }, (_, i) => {
       <div
         v-for="cell in cells"
         :key="cell.id"
-        class="w-full h-full animate-gradient-square"
+        class="w-full h-full animate-gradient-wave"
         :style="{
-          animationDelay: `${(cell.row + cell.col - 2) * (5000 / (gridSize * 2 - 1))}ms`
+          animationDelay: `${(cell.row + cell.col) * 150}ms`,
+          opacity: 1 - (cell.row + cell.col) * 0.03
         }"
       ></div>
     </div>
@@ -37,21 +37,15 @@ const cells = Array.from({ length: gridSize * gridSize }, (_, i) => {
 </template>
 
 <style>
-@keyframes gradientShift {
-  0%   { background: linear-gradient(135deg, red, orange); }
-  33%  { background: linear-gradient(135deg, blue, cyan); }
-  66%  { background: linear-gradient(135deg, green, lime); }
-  100% { background: linear-gradient(135deg, red, orange); }
+@keyframes gradientWave {
+  0%   { background: linear-gradient(135deg, #ff0000, #ff7f7f); }
+  40%  { background: linear-gradient(135deg, #ff0000, #ff7f7f); } /* Red */
+  50%  { background: linear-gradient(135deg, #00cc00, #66ff66); }
+  90%  { background: linear-gradient(135deg, #00cc00, #66ff66); } /* Green */
+  100% { background: linear-gradient(135deg, #ff0000, #ff7f7f); }
 }
 
-.animate-gradient-square {
-  background: linear-gradient(135deg, red, orange); 
-  animation: gradientShift 5s infinite;
+.animate-gradient-wave {
+  animation: gradientWave 8s infinite ease-in-out;
 }
-
 </style>
-
-
-.animate-gradient-square {
-  background: red !important;
-}
